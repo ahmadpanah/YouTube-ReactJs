@@ -4,11 +4,9 @@ import { Paper, Typography } from '@material-ui/core';
 
 const VideoDetail = ({ video }) => {
     
-    if  (!video) return <div>Loading...</div>
+    if (!video) return <div>Loading...</div>;
 
-    console.log(video);
-
-    const videoSrc = 'https://www.youtube.com/embed/${video.id.videoId}'
+    const videoSrc = 'https://youtube.com/embed/${video.id.videoId}';
 
     return (
         <React.Fragment>
@@ -18,10 +16,9 @@ const VideoDetail = ({ video }) => {
             <Paper elevation={6} style={{ padding: '16px'}}>
                 <Typography variant="h4">{video.snippet.title} - {video.snippet.channelTitle}</Typography>
                 <Typography variant="subtitle2">{video.snippet.description}</Typography>
-
             </Paper>
         </React.Fragment>
-    )
+    );
 }
 
 export default VideoDetail;
